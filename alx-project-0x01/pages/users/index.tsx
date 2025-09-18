@@ -1,4 +1,3 @@
-// pages/users/index.tsx
 import UserCard from "@/components/common/UserCard";
 import UserModal from "@/components/common/UserModal";
 import { UserProps } from "@/interfaces";
