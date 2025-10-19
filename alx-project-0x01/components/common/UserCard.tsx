@@ -32,7 +32,7 @@ const UserCard: React.FC<Props> = ({ user }) => {
         </div>
         <div>
           <strong>Company:</strong> {user.company.name}
-          <div className="text-xs text-gray-500 italic">"{user.company.catchPhrase}"</div>
+          <div className="text-xs text-gray-500 italic">&ldquo;{user.company.catchPhrase}&rdquo;</div>
         </div>
         <div>
           <strong>Address:</strong>
