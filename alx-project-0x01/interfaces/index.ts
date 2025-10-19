@@ -27,7 +27,7 @@ export interface PostProps {
   createdAt?: string;
 };
 export interface PostData {
-  userId: number | string;
+  userId: number;
   title: string;
   body: string;
 };
