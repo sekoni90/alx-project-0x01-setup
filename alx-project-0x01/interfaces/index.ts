@@ -1,5 +1,5 @@
 // interfaces/index.ts
-export type UserProps = {
+export interface UserProps {
   id: number | string;
   name: string;
   username: string;
@@ -19,14 +19,14 @@ export type UserProps = {
   };
 };
 
-export type PostProps = {
+export interface PostProps {
   id: number | string;
   title: string;
   body: string;
   userId?: number | string;
   createdAt?: string;
 };
-export type PostData = {
+export interface PostData {
   userId: number | string;
   title: string;
   body: string;
