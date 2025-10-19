@@ -20,10 +20,10 @@ export interface UserProps {
 };
 
 export interface PostProps {
-  id: number | string;
+  id: number;
   title: string;
   body: string;
-  userId?: number | string;
+  userId?: number;
   createdAt?: string;
 };
 export interface PostData {
