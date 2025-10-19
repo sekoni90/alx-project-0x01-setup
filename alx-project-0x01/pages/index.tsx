@@ -1,32 +1,24 @@
-// pages/users/index.tsx
-import React from "react";
-import { NextPage } from "next";
-import UserCard from "@/components/common/UserCard";
-import { UserProps } from "@/interfaces";
+import Header from "@/components/layout/Header";
 
-interface UsersPageProps {
-  posts: UserProps[]; // keeping "posts" per instructions
-}
-
-export async function getStaticProps() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const posts = await response.json();
-  return {
-    props: { posts },
-  };
-}
-
-const Users: NextPage<UsersPageProps> = ({ posts }) => {
+const Home: React.FC = () => {
   return (
-    <main className="min-h-screen p-8 bg-gray-50">
-      <h1 className="text-2xl font-bold mb-6">Users</h1>
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map((user) => (
-          <UserCard key={user.id} user={user} />
-        ))}
-      </section>
-    </main>
-  );
-};
+    <div className="flex flex-col h-screen">
+      <Header />
+      <main className="flex-grow flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white">
+            Welcome to our Application!
+          </h1>
+          <p className="mt-4 text-xl text-white">
+            We're glad you're here. Explore and enjoy your experience.
+          </p>
+          <button className="mt-6 px-6 py-3 bg-white text-blue-500 rounded-full font-semibold hover:bg-gray-200 transition">
+            Get Started
+          </button>
+            </div>
+      </main>
+    </div>
+  )
+}
 
-export default Users;
+export default Home;
