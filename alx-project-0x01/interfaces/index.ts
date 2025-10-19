@@ -1,6 +1,6 @@
 // interfaces/index.ts
 export interface UserProps {
-  id: number | string;
+  id: number;
   name: string;
   username: string;
   email: string;
